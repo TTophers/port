@@ -1,9 +1,9 @@
 {
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
-    { "source": "/contact", "destination": "/pages/contact.html" },
-    { "source": "/thanks", "destination": "/pages/thanks.html" },
-    { "source": "/prices", "destination": "/pages/prices.html" },
-    { "source": "/privacy", "destination": "/pages/privacy.html" }
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/thanks", "destination": "/thanks.html" },
+    { "source": "/prices", "destination": "/prices.html" },
+    { "source": "/privacy", "destination": "/privacy.html" }
   ]
 }
