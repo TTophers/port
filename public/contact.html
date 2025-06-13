@@ -56,7 +56,7 @@
     })
 
     if (res.ok) {
-      window.location.href = '/pages/thanks.html'
+      window.location.href = '/thanks'
     } else {
       const errorData = await res.json()
       alert('Error: ' + (errorData.error || 'Something went wrong'))
