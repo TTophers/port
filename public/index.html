@@ -23,28 +23,38 @@
 <body class="bg-gray-800 text-gray-800 pb-14 md:pb-0">
 
   <!-- Navigation -->
-  <nav class="bg-gray-900 text-gray-300 text-sm px-6 py-4 flex md:flex-row flex-col md:justify-between items-center border-t border-gray-700 fixed md:static bottom-0 md:bottom-auto w-full md:w-auto z-40">
-    <div class="font-semibold text-white tracking-wide mb-2 md:mb-0">
-      ChrisTopher Staples
+  <nav class="bg-gray-900 text-gray-300 text-sm px-6 py-4 fixed  left-0 w-full z-50 border-t border-gray-700">
+    <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+      <div class="text-center md:text-left font-semibold text-white tracking-wide mb-4 md:mb-0">
+        ChrisTopher Staples
+      </div>
+      <ul class="flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0 text-center md:text-left">
+        <li><a href="/" class="hover:text-white transition">Home</a></li>
+        <li><a href="/prices" class="hover:text-white transition">Pricing</a></li>
+        <li><a href="/privacy" class="hover:text-white transition">Privacy Policy</a></li>
+        <li><a href="/contact" class="hover:text-white transition">Contact</a></li>
+      </ul>
     </div>
-    <ul class="flex md:flex-row flex-col md:space-x-6 space-y-2 md:space-y-0 w-full md:w-auto justify-around md:justify-start">
-      <li><a href="/" class="hover:text-white transition block text-center md:inline">Home</a></li>
-      <li><a href="/prices" class="hover:text-white transition block text-center md:inline">Pricing</a></li>
-      <li><a href="/privacy" class="hover:text-white transition block text-center md:inline">Privacy Policy</a></li>
-      <li><a href="/contact" class="hover:text-white transition block text-center md:inline">Contact</a></li>
-    </ul>
   </nav>
 
   <!-- Hero -->
   <section class="min-h-screen flex items-center justify-center text-center px-6 bg-red-100">
     <div>
-      <h1 class="text-5xl font-bold text-pink-600 mb-4">Hi, I'm Topher</h1>
-      <p class="text-xl mb-6">Creative Developer & Content Creator</p>
+      <h1 class="text-5xl font-bold text-pink-600 mb-4">Hi, I'm TOPH</h1>
+      <p class="text-xl mb-6">Creative Web Developer & Self Music Production Team</p>
       <a href="#projects" class="bg-pink-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">
         See My Work
       </a>
     </div>
   </section>
+
+    <!-- About -->
+    <section class="py-20 bg-pink-100 text-center px-6">
+      <h2 class="text-3xl font-bold text-pink-700 mb-6">About Me</h2>
+      <p class="max-w-2xl mx-auto text-lg">
+        I'm a self-taught creator blending code, music, and content. Whether it’s launching a brand, building from scratch, or crafting a vibe — I do it all with intention.
+      </p>
+    </section>
 
   <!-- Projects -->
   <section id="projects" class="py-20 bg-white">
@@ -68,14 +78,6 @@
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- About -->
-  <section class="py-20 bg-pink-100 text-center px-6">
-    <h2 class="text-3xl font-bold text-pink-700 mb-6">About Me</h2>
-    <p class="max-w-2xl mx-auto text-lg">
-      I'm a self-taught creator blending code, music, and content. Whether it’s launching a brand, building from scratch, or crafting a vibe — I do it all with intention.
-    </p>
   </section>
 
   <!-- Pricing Summary -->
@@ -111,7 +113,7 @@
   <a href="/contact" 
      class="fixed bottom-6 right-6 z-50 bg-pink-600 text-white px-4 py-3 rounded-full shadow-lg hover:bg-blue-700 transition cursor-pointer
             flex items-center justify-center whitespace-nowrap">
-    Contact Us
+    Contact Me
   </a>
 
   <script>
