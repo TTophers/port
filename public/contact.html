@@ -14,54 +14,53 @@
     }
   </style>
 </head>
-<body class="bg-red-100 text-gray-800">
+<body class="bg-slate-900 text-slate-100">
 
   <!-- Back to site -->
-  <a href="/" class="fixed top-4 left-4 bg-white text-blue-700 font-semibold px-4 py-2 rounded-full shadow hover:bg-gray-100 transition z-50">
+  <a href="/" class="fixed top-4 left-4 bg-slate-800 text-teal-400 font-semibold px-4 py-2 rounded-full shadow hover:bg-slate-700 transition z-50">
     ← Back to Site
   </a>
 
   <!-- Contact Section -->
   <section class="py-16 px-4 min-h-screen flex items-center justify-center">
-    <form id="contact" method="POST" class="space-y-4 bg-white p-8 rounded-xl shadow-md w-full max-w-md">
-      <h1 class="text-3xl font-bold mb-6 text-center text-pink-600">Contact Me</h1>
+    <form id="contact" method="POST" class="space-y-4 bg-slate-800 p-8 rounded-xl shadow-lg w-full max-w-md border border-slate-700">
+      <h1 class="text-3xl font-bold mb-6 text-center text-teal-400">Contact Me</h1>
       
-      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded" />
-      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded" />
-      <textarea name="message" placeholder="Your Message" required class="w-full p-3 border border-gray-300 rounded h-32"></textarea>
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border border-slate-600 bg-slate-900 text-white rounded focus:ring-2 focus:ring-teal-500" />
+      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border border-slate-600 bg-slate-900 text-white rounded focus:ring-2 focus:ring-teal-500" />
+      <textarea name="message" placeholder="Your Message" required class="w-full p-3 border border-slate-600 bg-slate-900 text-white rounded h-32 focus:ring-2 focus:ring-teal-500"></textarea>
       
-      <button type="submit" class="w-full bg-pink-600 text-white px-4 py-3 rounded hover:bg-blue-700 transition">
+      <button type="submit" class="w-full bg-teal-500 text-white px-4 py-3 rounded hover:bg-teal-600 transition font-semibold">
         Send Message
       </button>
     </form>
   </section>
 
   <!-- JS for form submission -->
-  
-<script>
-  document.getElementById('contact').addEventListener('submit', async (e) => {
-    e.preventDefault()
+  <script>
+    document.getElementById('contact').addEventListener('submit', async (e) => {
+      e.preventDefault()
 
-    const form = e.target
-    const data = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value
-    }
+      const form = e.target
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value
+      }
 
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+
+      if (res.ok) {
+        window.location.href = '/thanks'
+      } else {
+        const errorData = await res.json()
+        alert('Error: ' + (errorData.error || 'Something went wrong'))
+      }
     })
-
-    if (res.ok) {
-      window.location.href = '/thanks'
-    } else {
-      const errorData = await res.json()
-      alert('Error: ' + (errorData.error || 'Something went wrong'))
-    }
-  })
-</script>
+  </script>
 </body>
 </html>
